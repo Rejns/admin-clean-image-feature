@@ -1,7 +1,6 @@
 Current filter: {{ filter }}
 <li><a href="" ng-click="changeFilterTo('oneOrMore')">one or more</a></li>
-custom
-<input ng-model="search.points" ng-click="changeFilterTo('choice')"/>
+<li>custom <input ng-model="search.points" ng-click="changeFilterTo('choice')"/></li>
 <ul class="photos" style="list-style: none">
 
   <li ng-repeat="photo in photos | filter:filters | exact:search" class="photo" style="margin-bottom: 20px">
