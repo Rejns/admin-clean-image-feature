@@ -34,7 +34,7 @@ function seed(startPath){
         var filename=path.join(startPath,files[i]);
         var stat = fs.lstatSync(filename);
         if (stat.isDirectory()){
-            fromDir(filename); //recurse
+            seed(filename); //recurse
         }
         else
         {
