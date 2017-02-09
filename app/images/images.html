@@ -1,0 +1,27 @@
+<ul class="photos" style="list-style: none">
+
+  <li ng-repeat="photo in photos | filter: removeArchived" class="photo" style="margin-bottom: 20px">
+
+    <div>
+     points: {{ photo.points }}
+    </div>
+    <img
+      bn-lazy-src="{{ photo.src }}"
+      width="150"
+      height="150"
+      alt="Loading ..."
+      />
+    <div>
+    <button ng-click="removeLi($event, photo.id, photo)">delete</button>
+    <a href="">{{ photo.src.substring(0, photo.src.lastIndexOf('/')) }}/</a>
+    </div>
+
+  </li>
+
+</ul>
+
+        
+
+
+
+
