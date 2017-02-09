@@ -47,5 +47,13 @@ function seed(startPath){
             });
         }
     };
+
 };
+
+//!!!
+//improve from http://www.jonxie.com/blog/2014/10/12/how-to-seed-mongodb-with-node-dot-js-from-command-line/
+//todo async
+setTimeout(function() {
+    process.exit(0);
+}, 20000)
 
