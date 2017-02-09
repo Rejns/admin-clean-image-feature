@@ -16,9 +16,13 @@ var ImgSchema = new Schema({
 // our model
 var Img = mongoose.model('Img', ImgSchema);
 
+//remove existing data from collection then start seeding
+Img.remove({}, function() {
+    seed('./assets/images');
+});
 
 //save paths of photos into database
-function fromDir(startPath){
+function seed(startPath){
 
     if (!fs.existsSync(startPath)){
         console.log("no dir ",startPath);
@@ -45,4 +49,3 @@ function fromDir(startPath){
     };
 };
 
-fromDir('./assets/images');
